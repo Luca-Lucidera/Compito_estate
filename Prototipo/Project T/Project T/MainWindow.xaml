@@ -1,0 +1,14 @@
+﻿<Window x:Class="Project_T.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_T"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="btn_search">
+        <Button x:Name="btn_cerca" Content="CERCA TATA" HorizontalAlignment="Left" Margin="56,164,0,0" VerticalAlignment="Top" Width="254" Height="121" Click="btn_cerca_Click"/>
+        <Button x:Name="btn_lavora" Content="LAVORA PER NOI" HorizontalAlignment="Left" Margin="408,164,0,0" VerticalAlignment="Top" Width="307" Height="121" Click="btn_lavora_Click"/>
+
+    </Grid>
+</Window>
