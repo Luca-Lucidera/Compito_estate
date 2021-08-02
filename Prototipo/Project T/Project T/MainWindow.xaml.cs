@@ -20,19 +20,23 @@ namespace Project_T
     /// </summary>
     public partial class MainWindow : Window
     {
+        DBConnect db;
         public MainWindow()
         {
             InitializeComponent();
+            db = new DBConnect();
         }
 
-        private void btn_cerca_Click(object sender, RoutedEventArgs e)
+        private void btn_utente_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btn_lavora_Click(object sender, RoutedEventArgs e)
+        private void btn_tata_Click(object sender, RoutedEventArgs e)
         {
-
+            FinestraTata t = new FinestraTata();
+            this.Hide();
+            t.Show();
         }
     }
 }

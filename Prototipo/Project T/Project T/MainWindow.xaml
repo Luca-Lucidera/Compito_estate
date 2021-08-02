@@ -7,8 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid x:Name="btn_search">
-        <Button x:Name="btn_cerca" Content="CERCA TATA" HorizontalAlignment="Left" Margin="56,164,0,0" VerticalAlignment="Top" Width="254" Height="121" Click="btn_cerca_Click"/>
-        <Button x:Name="btn_lavora" Content="LAVORA PER NOI" HorizontalAlignment="Left" Margin="408,164,0,0" VerticalAlignment="Top" Width="307" Height="121" Click="btn_lavora_Click"/>
-
+        <Button x:Name="btn_utente" Content="UTENTE" HorizontalAlignment="Left" Margin="227,64,0,0" VerticalAlignment="Top" Width="284" Height="92" Click="btn_utente_Click"/>
+        <Button x:Name="btn_tata" Content="TATA" HorizontalAlignment="Left" Margin="227,215,0,0" VerticalAlignment="Top" Width="284" Height="92" Click="btn_tata_Click"/>
     </Grid>
 </Window>
