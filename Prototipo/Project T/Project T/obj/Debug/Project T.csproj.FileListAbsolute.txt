@@ -40,3 +40,5 @@ D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\obj\Debug
 D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\obj\Debug\FinestraUtente.g.cs
 D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\obj\Debug\FinestraTata.baml
 D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\obj\Debug\FinestraUtente.baml
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\obj\Debug\FinestraGestioneTata.g.cs
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\obj\Debug\FinestraGestioneTata.baml

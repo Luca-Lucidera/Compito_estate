@@ -62,7 +62,6 @@ namespace Project_T
                 return false;
             }
         }
-
         //Close connection
         private bool CloseConnection()
         {
@@ -125,5 +124,86 @@ namespace Project_T
             CloseConnection();
             return  false;
         }
+        public bool registrati(string nome, string cognome, string email, string password, string zona_operativa, string image_path)
+        {
+            //La registrazione viene eseguita solo se nel database non è già presente
+            if (!loginTata(email, password))
+            {
+                if (this.OpenConnection() == true)
+                {
+                    string query = String.Format("INSERT INTO tata(nome,cognome,email,psw,zona_operativa,occupata,image_path) VALUE('{0}','{1}','{2}','{3}','{4}',{5},'{6}')", nome, cognome, email, password, zona_operativa, false, image_path);
+                    //create command and assign the query and connection from the constructor
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                    //Execute command
+                    cmd.ExecuteNonQuery();
+
+                    //close connection
+                    this.CloseConnection();
+                    return true;
+                }
+                return false;
+            }
+            return false;
+        }
+        public int getIdByEmail(string email)
+        {
+            
+            if (this.OpenConnection()== true)
+            {
+                int id = -1;
+                string query = String.Format("SELECT id FROM tata WHERE email='{0}'", email);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                dataReader.Read();//se devo prendere un solo valore non devo fare vari cicli per il dataReader
+                id = Convert.ToInt32(dataReader["id"]);
+                this.CloseConnection();
+                dataReader.Close();
+                return id;
+            }
+            return -1;
+        }
+
+        public int OccupataByEmail(string email)
+        {
+
+            if (this.OpenConnection() == true)
+            {
+                int occupata = 0;
+                string query = String.Format("SELECT occupata FROM tata WHERE email='{0}'", email);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                dataReader.Read();//se devo prendere un solo valore non devo fare vari cicli per il dataReader
+                occupata = Convert.ToInt32(dataReader["occupata"]);
+                this.CloseConnection();
+                dataReader.Close();
+                return occupata;
+            }
+            return -1;
+        }
+        public List<string> GetTata(string email)
+        {
+            if(this.OpenConnection() == true)
+            {
+                string query = String.Format("SELECT * FROM tata where email='{0}'",email);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                dataReader.Read();
+                List<string> tata = new List<string>();
+                tata.Add(dataReader["id"].ToString());
+                tata.Add(dataReader["nome"].ToString());
+                tata.Add(dataReader["cognome"].ToString());
+                tata.Add(dataReader["email"].ToString());
+                tata.Add(dataReader["psw"].ToString());
+                tata.Add(dataReader["zona_operativa"].ToString());
+                tata.Add(dataReader["occupata"].ToString());
+                tata.Add(dataReader["image_path"].ToString());
+                dataReader.Close();
+                this.CloseConnection();
+                return tata;
+            }
+            return null;
+        }
     }
+
 }

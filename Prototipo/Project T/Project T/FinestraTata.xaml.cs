@@ -32,10 +32,15 @@ namespace Project_T
             if(db.loginTata(txt_email.Text,txt_password.Password))
             {
                 MessageBox.Show("login effettuato!");
+                List<string> tata = db.GetTata(txt_email.Text);
+                Tata t = new Tata(tata);
+                FinestraGestioneTata f = new FinestraGestioneTata(t);
+                this.Hide();
+                f.Show();
             }
             else
             {
-                MessageBox.Show("Errore!");
+                MessageBox.Show("Attenzione, mail o password sbagliate!");
             }
             
            
@@ -43,14 +48,15 @@ namespace Project_T
 
         private void btn_registrati_Click(object sender, RoutedEventArgs e)
         {
-            string image_path = "";
+            string image_path = "alberto";
             if (db.registrati(txt_nome.Text, txt_cognome.Text, txt_email.Text, txt_password.Password, txt_zona_operativa1.Text, image_path))
             {
                 MessageBox.Show("Registrazione completata!");
+                
             }
             else
             {
-                MessageBox.Show("Errore");
+                MessageBox.Show("Utente già registrato! Fare il login");
             }
         }
 

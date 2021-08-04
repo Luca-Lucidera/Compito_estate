@@ -98,6 +98,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DBconnect.cs" />
+    <Compile Include="FinestraGestioneTata.xaml.cs">
+      <DependentUpon>FinestraGestioneTata.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FinestraTata.xaml.cs">
       <DependentUpon>FinestraTata.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,10 @@
     </Compile>
     <Compile Include="Tata.cs" />
     <Compile Include="Utente.cs" />
+    <Page Include="FinestraGestioneTata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FinestraTata.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
