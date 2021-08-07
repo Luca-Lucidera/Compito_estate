@@ -102,6 +102,7 @@ namespace Project_T
                 return Count;
             }
         }
+
         public bool loginTata(string email,string password)
         {
             string query = "SELECT email, psw FROM tata";
@@ -204,6 +205,78 @@ namespace Project_T
             }
             return null;
         }
+        public bool CambiaMail(string email, int id)
+        {
+            if(this.OpenConnection() == true)
+            {
+                string query = String.Format("UPDATE tata SET email = '{0}' WHERE id = {1}", email,id);
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = query;
+                cmd.Connection = connection;
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+                return true;
+            }
+            return false;
+        }
+
+        public bool CambiaOccupazione(int id)
+        {
+            if(OpenConnection() == true)
+            {
+                string query= String.Format("SELECT occupata FROM tata WHERE id = {0}", id);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                dataReader.Read();//se devo prendere un solo valore non devo fare vari cicli per il dataReader
+                bool occupata = Convert.ToBoolean(dataReader["occupata"]);
+                dataReader.Close();
+                if (occupata)
+                {
+                    query = String.Format("UpDATE tata SET occupata = false WHERE id = {0}", id);
+                    cmd.CommandText = query;
+                    cmd.Connection = connection;
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+                    query = String.Format("UpDATE tata SET occupata = true WHERE id = {0}", id);
+                    cmd.CommandText = query;
+                    cmd.Connection = connection;
+                    cmd.ExecuteNonQuery();
+                }
+                this.CloseConnection();
+                return true;
+            }
+            return false;
+        }
+
+        public bool cambiaZonaOperativa(object text, int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool CambiaPassword(object text, int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal string getEmailById(int id)
+        {
+            if (this.OpenConnection() == true)
+            {
+                string email = "";
+                string query = String.Format("SELECT email FROM tata WHERE id='{0}'", id);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                dataReader.Read();//se devo prendere un solo valore non devo fare vari cicli per il dataReader
+                email = Convert.ToString(dataReader["email"]);
+                this.CloseConnection();
+                dataReader.Close();
+                return email;
+            }
+            return "-1";
+        }
+
     }
 
 }
