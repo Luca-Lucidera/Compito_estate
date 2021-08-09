@@ -27,7 +27,7 @@
         <Button x:Name="btn_cambia_occupazione" Content="Ti hanno assunta? &#xD;&#xA;Se si premimi" HorizontalAlignment="Left" Margin="323,316,0,0" VerticalAlignment="Top" Width="155" Height="50" Click="btn_cambia_occupazione_Click"/>
         <TextBox x:Name="txt_mail" HorizontalAlignment="Left" Height="26" Margin="496,158,0,0" TextWrapping="Wrap" Text="Inserire mail nuova" VerticalAlignment="Top" Width="171"/>
         <TextBox x:Name="txt_pass" HorizontalAlignment="Left" Height="26" Margin="496,222,0,0" TextWrapping="Wrap" Text="Inserire password nuova" VerticalAlignment="Top" Width="171"/>
-        <TextBox x:Name="txt_zo" HorizontalAlignment="Left" Height="26" Margin="496,274,0,0" TextWrapping="Wrap" Text="Inserire mail nuova" VerticalAlignment="Top" Width="171"/>
+        <TextBox x:Name="txt_zo" HorizontalAlignment="Left" Height="26" Margin="496,274,0,0" TextWrapping="Wrap" Text="Inserire zona operativa nuova" VerticalAlignment="Top" Width="171"/>
 
     </Grid>
 </Window>

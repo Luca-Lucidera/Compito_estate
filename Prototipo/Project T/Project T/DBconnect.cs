@@ -232,14 +232,14 @@ namespace Project_T
                 dataReader.Close();
                 if (occupata)
                 {
-                    query = String.Format("UpDATE tata SET occupata = false WHERE id = {0}", id);
+                    query = String.Format("UPDATE tata SET occupata = false WHERE id = {0}", id);
                     cmd.CommandText = query;
                     cmd.Connection = connection;
                     cmd.ExecuteNonQuery();
                 }
                 else
                 {
-                    query = String.Format("UpDATE tata SET occupata = true WHERE id = {0}", id);
+                    query = String.Format("UPDATE tata SET occupata = true WHERE id = {0}", id);
                     cmd.CommandText = query;
                     cmd.Connection = connection;
                     cmd.ExecuteNonQuery();
@@ -250,14 +250,34 @@ namespace Project_T
             return false;
         }
 
-        public bool cambiaZonaOperativa(object text, int id)
+        public bool cambiaZonaOperativa(string zona_operativa, int id)
         {
-            throw new NotImplementedException();
+            if(OpenConnection() == true)
+            {
+                string query = String.Format("UPDATE tata SET zona_operativa = '{0}' WHERE id = {1}", zona_operativa, id);
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = query;
+                cmd.Connection = connection;
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+                return true;
+            }
+            return false;
         }
 
-        public bool CambiaPassword(object text, int id)
+        public bool CambiaPassword(string password, int id)
         {
-            throw new NotImplementedException();
+            if (OpenConnection() == true)
+            {
+                string query = String.Format("UPDATE tata SET psw = '{0}' WHERE id = {1}", password, id);
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = query;
+                cmd.Connection = connection;
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+                return true;
+            }
+            return false;
         }
 
         internal string getEmailById(int id)
