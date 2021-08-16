@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="FinestraUtente" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="EMAIL" HorizontalAlignment="Left" Margin="172,32,0,0" VerticalAlignment="Top" Width="95" Height="23"/>
+        <Label Content="PASSWORD" HorizontalAlignment="Left" Margin="172,82,0,0" VerticalAlignment="Top" Width="95" Height="23"/>
+        <Button x:Name="btn_login" Content="LOGIN" HorizontalAlignment="Left" Margin="172,133,0,0" VerticalAlignment="Top" Width="405" Height="35" Click="btn_login_Click" RenderTransformOrigin="0.497,0.516"/>
+        <TextBox x:Name="txt_email" HorizontalAlignment="Left" Height="23" Margin="285,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292"/>
+        <PasswordBox x:Name="txt_password" HorizontalAlignment="Left" Margin="285,82,0,0" VerticalAlignment="Top" Width="292" Height="23"/>
+        <TextBox x:Name="txt_nome" HorizontalAlignment="Left" Height="23" Margin="334,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243"/>
+        <TextBox x:Name="txt_cognome" HorizontalAlignment="Left" Height="23" Margin="334,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243"/>
+        <TextBox x:Name="txt_nTelefono" HorizontalAlignment="Left" Height="23" Margin="334,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243"/>
+        <Label Content="NOME" HorizontalAlignment="Left" Margin="172,201,0,0" VerticalAlignment="Top" Width="95" Height="23"/>
+        <Label Content="COGNOME" HorizontalAlignment="Left" Margin="172,255,0,0" VerticalAlignment="Top" Width="95" Height="23"/>
+        <Label Content="NUMERO DI TELEFONO" HorizontalAlignment="Left" Margin="172,309,0,0" VerticalAlignment="Top" Width="135" Height="23"/>
+        <Button x:Name="btn_registrati" Content="REGISTRATI (COMPILARE EMAIL E PASSWORD SOPRA)" HorizontalAlignment="Left" Margin="172,360,0,0" VerticalAlignment="Top" Width="405" Height="35" RenderTransformOrigin="0.497,0.516" Click="btn_registrati_Click"/>
+
     </Grid>
 </Window>

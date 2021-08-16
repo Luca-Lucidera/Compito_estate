@@ -29,7 +29,9 @@ namespace Project_T
 
         private void btn_utente_Click(object sender, RoutedEventArgs e)
         {
-
+            FinestraUtente u = new FinestraUtente();
+            u.Show();
+            this.Hide();
         }
 
         private void btn_tata_Click(object sender, RoutedEventArgs e)

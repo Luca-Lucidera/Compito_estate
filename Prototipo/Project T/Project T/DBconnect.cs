@@ -34,6 +34,7 @@ namespace Project_T
 
             connection = new MySqlConnection(connectionString);
         }
+
         //open connection to database
         private bool OpenConnection()
         {
@@ -62,6 +63,7 @@ namespace Project_T
                 return false;
             }
         }
+
         //Close connection
         private bool CloseConnection()
         {
@@ -76,7 +78,7 @@ namespace Project_T
                 return false;
             }
         }
-        //open connection to database
+ 
         //Count statement
         public int Count()
         {
@@ -103,6 +105,7 @@ namespace Project_T
             }
         }
 
+        //metodi per gestire la tabella della tata
         public bool loginTata(string email,string password)
         {
             string query = "SELECT email, psw FROM tata";
@@ -280,7 +283,7 @@ namespace Project_T
             return false;
         }
 
-        internal string getEmailById(int id)
+        public string getEmailById(int id)
         {
             if (this.OpenConnection() == true)
             {
@@ -296,6 +299,53 @@ namespace Project_T
             }
             return "-1";
         }
+
+        //metodi per gesitere la tabella degli utenti
+        public bool loginUtente(string email, string password)
+        {
+            string query = "SELECT email, psw FROM utenti_registrati";
+            if (OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    if (dataReader["email"].ToString() == email
+                        && dataReader["psw"].ToString() == password)
+                    {
+                        CloseConnection();
+                        return true;
+                    }
+                }
+                CloseConnection();
+                return false;
+            }
+            CloseConnection();
+            return false;
+        }
+        public bool registraUtente(string nome, string cognome, string email, string password, int nTelefono)
+        {
+            
+            if (!loginUtente(email, password))
+            {
+                if (this.OpenConnection() == true)
+                {
+                    string query = String.Format("INSERT INTO utenti_registrati(nome,cognome,email,psw,telefono) VALUE('{0}','{1}','{2}','{3}','{4}')", nome, cognome, email, password, nTelefono);
+                    //create command and assign the query and connection from the constructor
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                    //Execute command
+                    cmd.ExecuteNonQuery();
+
+                    //close connection
+                    this.CloseConnection();
+                    return true;
+                }
+                return false;
+            }   
+            return false;
+        }
+
 
     }
 
