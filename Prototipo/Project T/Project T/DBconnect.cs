@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -344,6 +345,39 @@ namespace Project_T
                 return false;
             }   
             return false;
+        }
+
+        public List<string>[] Cerca(string zona)
+        {
+            if(OpenConnection() == true)
+            {
+                string query = String.Format("SELECT nome,cognome,email,zona_operativa FROM tata WHERE zona_operativa = '{0}' AND OCCUPATA = 0", zona);
+                List<string>[] tabella= new List<string>[4];//4 colonne
+                tabella[0] = new List<string>();
+                tabella[1] = new List<string>();
+                tabella[2] = new List<string>();
+                tabella[3] = new List<string>();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    tabella[0].Add(dataReader["nome"] + "");
+                    tabella[1].Add(dataReader["cognome"] + "");
+                    tabella[2].Add(dataReader["email"] + "");
+                    tabella[3].Add(dataReader["zona_operativa"] + "");
+                }
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+                //return list to be displayed
+                return tabella;
+            }
+            return null;
         }
 
 

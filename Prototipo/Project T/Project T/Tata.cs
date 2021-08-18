@@ -44,12 +44,7 @@ namespace Project_T
 
         public override string ToString()
         {
-            string tmp="";
-            if (occupata)
-                tmp = "occupata";
-            else
-                tmp = "libera";
-            return "id: " + id + " nome " + nome + " cognome " + cognome + " zona operativa: " + zona_operativa + " occupazione: " + tmp;
+            return nome + " " + cognome + " " + email + " " + zona_operativa;
         }
     }
 }

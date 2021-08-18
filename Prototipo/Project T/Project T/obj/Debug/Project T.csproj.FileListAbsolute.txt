@@ -85,3 +85,5 @@ C:\Users\lucid\Desktop\Compito estate github\Luca-Lucidera\Compito_estate\Protot
 C:\Users\lucid\Desktop\Compito estate github\Luca-Lucidera\Compito_estate\Prototipo\Project T\Project T\obj\Debug\Project T.csproj.CopyComplete
 C:\Users\lucid\Desktop\Compito estate github\Luca-Lucidera\Compito_estate\Prototipo\Project T\Project T\obj\Debug\Project T.exe
 C:\Users\lucid\Desktop\Compito estate github\Luca-Lucidera\Compito_estate\Prototipo\Project T\Project T\obj\Debug\Project T.pdb
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\obj\Debug\finestra_trova_tata.g.cs
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\obj\Debug\finestra_trova_tata.baml

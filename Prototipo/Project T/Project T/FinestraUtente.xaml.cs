@@ -31,6 +31,9 @@ namespace Project_T
             if (db.loginUtente(txt_email.Text, txt_password.Password))
             {
                 MessageBox.Show("Login effettuato");
+                this.Hide();
+                finestra_trova_tata f = new finestra_trova_tata();
+                f.Show();
             }
             else
             {

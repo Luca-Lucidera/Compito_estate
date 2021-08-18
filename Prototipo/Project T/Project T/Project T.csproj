@@ -107,6 +107,9 @@
     <Compile Include="FinestraUtente.xaml.cs">
       <DependentUpon>FinestraUtente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="finestra_trova_tata.xaml.cs">
+      <DependentUpon>finestra_trova_tata.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tata.cs" />
     <Compile Include="Utente.cs" />
     <Page Include="FinestraGestioneTata.xaml">
@@ -118,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FinestraUtente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="finestra_trova_tata.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
