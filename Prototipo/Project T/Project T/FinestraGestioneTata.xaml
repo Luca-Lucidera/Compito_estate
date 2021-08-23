@@ -14,7 +14,7 @@
         <Label Content="Password" HorizontalAlignment="Left" Margin="21,222,0,0" VerticalAlignment="Top"/>
         <Label Content="Zona operativa" HorizontalAlignment="Left" Margin="21,266,0,0" VerticalAlignment="Top"/>
         <Label Content="Occupata?" HorizontalAlignment="Left" Margin="21,316,0,0" VerticalAlignment="Top" Height="50"/>
-        <Image x:Name="immagine_profilo" HorizontalAlignment="Left" Height="159" Margin="610,10,0,0" VerticalAlignment="Top" Width="172"/>
+        <Image x:Name="immagine_profilo" HorizontalAlignment="Left" Height="121" Margin="610,10,0,0" VerticalAlignment="Top" Width="172"/>
         <Label x:Name="lbl_nome" Content="" HorizontalAlignment="Left" Margin="228,64,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_cognome" Content="" HorizontalAlignment="Left" Margin="228,105,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_mail" Content="" HorizontalAlignment="Left" Margin="228,158,0,0" VerticalAlignment="Top"/>
@@ -28,6 +28,7 @@
         <TextBox x:Name="txt_mail" HorizontalAlignment="Left" Height="26" Margin="496,158,0,0" TextWrapping="Wrap" Text="Inserire mail nuova" VerticalAlignment="Top" Width="171"/>
         <TextBox x:Name="txt_pass" HorizontalAlignment="Left" Height="26" Margin="496,222,0,0" TextWrapping="Wrap" Text="Inserire password nuova" VerticalAlignment="Top" Width="171"/>
         <TextBox x:Name="txt_zo" HorizontalAlignment="Left" Height="26" Margin="496,274,0,0" TextWrapping="Wrap" Text="Inserire zona operativa nuova" VerticalAlignment="Top" Width="171"/>
+        <Button x:Name="btn_homePage" Content="HOME&#xA;PAGE" HorizontalAlignment="Left" Margin="707,374,0,0" VerticalAlignment="Top" Width="75" Height="35" Background="Red" Click="btn_homePage_Click"/>
 
     </Grid>
 </Window>

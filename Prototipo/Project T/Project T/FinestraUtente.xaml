@@ -19,6 +19,7 @@
         <Label Content="COGNOME" HorizontalAlignment="Left" Margin="172,255,0,0" VerticalAlignment="Top" Width="95" Height="23"/>
         <Label Content="NUMERO DI TELEFONO" HorizontalAlignment="Left" Margin="172,309,0,0" VerticalAlignment="Top" Width="135" Height="23"/>
         <Button x:Name="btn_registrati" Content="REGISTRATI (COMPILARE EMAIL E PASSWORD SOPRA)" HorizontalAlignment="Left" Margin="172,360,0,0" VerticalAlignment="Top" Width="405" Height="35" RenderTransformOrigin="0.497,0.516" Click="btn_registrati_Click"/>
+        <Button x:Name="btn_homePage" Content="HOME&#xD;&#xA;PAGE" HorizontalAlignment="Left" Margin="19,360,0,0" VerticalAlignment="Top" Width="75" Height="35" Background="Red" Click="btn_homePage_Click"/>
 
     </Grid>
 </Window>

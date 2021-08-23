@@ -109,5 +109,12 @@ namespace Project_T
 
             }
         }
+
+        private void btn_homePage_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow m = new MainWindow();
+            this.Hide();
+            m.Show();
+        }
     }
 }

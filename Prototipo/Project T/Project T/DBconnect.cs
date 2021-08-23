@@ -25,14 +25,13 @@ namespace Project_T
         //Initialize values
         private void Initialize()
         {
-            server = "localhost";
-            database = "db_tata";
-            uid = "root";
-            password = "";
+            server = "sql11.freemysqlhosting.net";
+            database = "sql11432119";
+            uid = "sql11432119";
+            password = "czrauTQEQy";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
             connection = new MySqlConnection(connectionString);
         }
 

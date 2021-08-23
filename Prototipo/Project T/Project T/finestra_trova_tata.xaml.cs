@@ -46,9 +46,13 @@ namespace Project_T
                     }
                     listPersone.ItemsSource = tmp;
                 }
-                MessageBox.Show("Nessun operatore in servizio");
-                
-            }catch(Exception ex){
+                else
+                {
+                    MessageBox.Show("Nessun operatore in servizio");
+                }
+
+            }
+            catch(Exception ex){
                 MessageBox.Show(ex.Message);
             }
         }
@@ -61,6 +65,13 @@ namespace Project_T
         private void txt_zona_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void btn_homePage_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow m = new MainWindow();
+            this.Hide();
+            m.Show();
         }
     }
 }

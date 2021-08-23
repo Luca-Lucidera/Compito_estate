@@ -18,6 +18,7 @@
             </ListView.View>
         </ListView>
         <Button x:Name="btn_contatta" Content="Contattala per incaricarla" HorizontalAlignment="Left" Margin="312,350,0,0" VerticalAlignment="Top" Width="154" Height="26" Click="btn_contatta_Click"/>
+        <Button x:Name="btn_homePage" Content="HOME&#xA;PAGE" HorizontalAlignment="Left" Margin="707,374,0,0" VerticalAlignment="Top" Width="75" Height="35" Background="Red" Click="btn_homePage_Click"/>
 
     </Grid>
 </Window>

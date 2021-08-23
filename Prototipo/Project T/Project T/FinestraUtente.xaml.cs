@@ -53,13 +53,20 @@ namespace Project_T
                 }
                 else
                 {
-                    MessageBox.Show("Utente già registrato, premere il tasto login");
+                    MessageBox.Show("Utente già registrato, premere il tasto login o errore nel collecarsi al server");
                 }
             }
             catch
             {
                 MessageBox.Show("Inserire solo numeri!!");
             }
+        }
+
+        private void btn_homePage_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow m = new MainWindow();
+            this.Hide();
+            m.Show();
         }
     }
 }
