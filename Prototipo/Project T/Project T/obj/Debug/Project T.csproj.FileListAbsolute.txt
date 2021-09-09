@@ -89,3 +89,19 @@ D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\obj\Debug
 D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\obj\Debug\finestra_trova_tata.baml
 C:\Users\lucid\Desktop\Compito estate github\Luca-Lucidera\Compito_estate\Prototipo\Project T\Project T\obj\Debug\finestra_trova_tata.g.cs
 C:\Users\lucid\Desktop\Compito estate github\Luca-Lucidera\Compito_estate\Prototipo\Project T\Project T\obj\Debug\finestra_trova_tata.baml
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\dll\x86\OpenCvSharpExtern.dll
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\dll\x86\opencv_ffmpeg400.dll
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\dll\x64\OpenCvSharpExtern.dll
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\dll\x64\opencv_ffmpeg400_64.dll
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.Blob.dll
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.dll
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.Extensions.dll
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.UserInterface.dll
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.pdb
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.xml
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.Blob.pdb
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.Blob.xml
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.Extensions.pdb
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.Extensions.xml
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.UserInterface.pdb
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.UserInterface.xml

@@ -25,6 +25,7 @@ namespace Project_T
         //Initialize values
         private void Initialize()
         {
+            
             server = "sql11.freemysqlhosting.net";
             database = "sql11432119";
             uid = "sql11432119";

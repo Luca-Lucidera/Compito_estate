@@ -8,26 +8,22 @@
         Title="FinestraGestioneTata" Height="450" Width="800">
     <Grid>
         <Label Content="IL TUO PROFILO" HorizontalAlignment="Left" Margin="323,10,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label Content="Nome" HorizontalAlignment="Left" Margin="21,64,0,0" VerticalAlignment="Top"/>
-        <Label Content="Cognome" HorizontalAlignment="Left" Margin="21,105,0,0" VerticalAlignment="Top"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="21,158,0,0" VerticalAlignment="Top"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="21,222,0,0" VerticalAlignment="Top"/>
-        <Label Content="Zona operativa" HorizontalAlignment="Left" Margin="21,266,0,0" VerticalAlignment="Top"/>
-        <Label Content="Occupata?" HorizontalAlignment="Left" Margin="21,316,0,0" VerticalAlignment="Top" Height="50"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="12,54,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="12,118,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label Content="Zona operativa" HorizontalAlignment="Left" Margin="12,162,0,0" VerticalAlignment="Top" Width="97"/>
+        <Label Content="Occupata?" HorizontalAlignment="Left" Margin="12,212,0,0" VerticalAlignment="Top" Height="50" Width="71"/>
         <Image x:Name="immagine_profilo" HorizontalAlignment="Left" Height="121" Margin="610,10,0,0" VerticalAlignment="Top" Width="172"/>
-        <Label x:Name="lbl_nome" Content="" HorizontalAlignment="Left" Margin="228,64,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_cognome" Content="" HorizontalAlignment="Left" Margin="228,105,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_mail" Content="" HorizontalAlignment="Left" Margin="228,158,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_password" Content="" HorizontalAlignment="Left" Margin="228,222,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_zona" Content="" HorizontalAlignment="Left" Margin="228,266,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbl_occupata" Content="" HorizontalAlignment="Left" Margin="228,316,0,0" VerticalAlignment="Top" Height="50"/>
-        <Button x:Name="btn_cambia_pass" Content="Cambia password" HorizontalAlignment="Left" Margin="323,222,0,0" VerticalAlignment="Top" Width="155" Height="26" Click="btn_cambia_pass_Click"/>
-        <Button x:Name="btn_cambia_email" Content="Cambia email --&gt;" HorizontalAlignment="Left" Margin="323,158,0,0" VerticalAlignment="Top" Width="155" Height="26" Click="btn_cambia_email_Click"/>
-        <Button x:Name="btn_cambia_zo" Content="Cambia zona operativa" HorizontalAlignment="Left" Margin="323,274,0,0" VerticalAlignment="Top" Width="155" Height="26" Click="btn_cambia_zo_Click"/>
-        <Button x:Name="btn_cambia_occupazione" Content="Ti hanno assunta? &#xD;&#xA;Se si premimi" HorizontalAlignment="Left" Margin="323,316,0,0" VerticalAlignment="Top" Width="155" Height="50" Click="btn_cambia_occupazione_Click"/>
-        <TextBox x:Name="txt_mail" HorizontalAlignment="Left" Height="26" Margin="496,158,0,0" TextWrapping="Wrap" Text="Inserire mail nuova" VerticalAlignment="Top" Width="171"/>
-        <TextBox x:Name="txt_pass" HorizontalAlignment="Left" Height="26" Margin="496,222,0,0" TextWrapping="Wrap" Text="Inserire password nuova" VerticalAlignment="Top" Width="171"/>
-        <TextBox x:Name="txt_zo" HorizontalAlignment="Left" Height="26" Margin="496,274,0,0" TextWrapping="Wrap" Text="Inserire zona operativa nuova" VerticalAlignment="Top" Width="171"/>
+        <Label x:Name="lbl_mail" Content="" HorizontalAlignment="Left" Margin="194,54,0,0" VerticalAlignment="Top" Width="9"/>
+        <Label x:Name="lbl_password" Content="" HorizontalAlignment="Left" Margin="194,118,0,0" VerticalAlignment="Top" Width="9"/>
+        <Label x:Name="lbl_zona" Content="" HorizontalAlignment="Left" Margin="194,162,0,0" VerticalAlignment="Top" Width="9"/>
+        <Label x:Name="lbl_occupata" Content="" HorizontalAlignment="Left" Margin="194,212,0,0" VerticalAlignment="Top" Height="50" Width="9"/>
+        <Button x:Name="btn_cambia_pass" Content="Cambia password" HorizontalAlignment="Left" Margin="277,118,0,0" VerticalAlignment="Top" Width="136" Height="26" Click="btn_cambia_pass_Click"/>
+        <Button x:Name="btn_cambia_email" Content="Cambia email --&gt;" HorizontalAlignment="Left" Margin="277,54,0,0" VerticalAlignment="Top" Width="136" Height="26" Click="btn_cambia_email_Click"/>
+        <Button x:Name="btn_cambia_zo" Content="Cambia zona operativa" HorizontalAlignment="Left" Margin="277,170,0,0" VerticalAlignment="Top" Width="136" Height="26" Click="btn_cambia_zo_Click"/>
+        <Button x:Name="btn_cambia_occupazione" Content="Ti hanno assunta? &#xD;&#xA;Se si premimi" HorizontalAlignment="Left" Margin="277,212,0,0" VerticalAlignment="Top" Width="136" Height="50" Click="btn_cambia_occupazione_Click"/>
+        <TextBox x:Name="txt_mail" HorizontalAlignment="Left" Height="26" Margin="429,54,0,0" TextWrapping="Wrap" Text="Inserire mail nuova" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="txt_pass" HorizontalAlignment="Left" Height="26" Margin="429,118,0,0" TextWrapping="Wrap" Text="Inserire password nuova" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="txt_zo" HorizontalAlignment="Left" Height="26" Margin="429,170,0,0" TextWrapping="Wrap" Text="Inserire zona operativa nuova" VerticalAlignment="Top" Width="150"/>
         <Button x:Name="btn_homePage" Content="HOME&#xA;PAGE" HorizontalAlignment="Left" Margin="707,374,0,0" VerticalAlignment="Top" Width="75" Height="35" Background="Red" Click="btn_homePage_Click"/>
 
     </Grid>

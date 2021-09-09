@@ -94,8 +94,6 @@ namespace Project_T
             string email = db.getEmailById(t.id);
             List<string> tata = db.GetTata(email);
             t = new Tata(tata);
-            lbl_nome.Content = t.nome;
-            lbl_cognome.Content = t.cognome;
             lbl_mail.Content = t.email;
             lbl_password.Content = t.psw;
             lbl_zona.Content = t.zona_operativa;
