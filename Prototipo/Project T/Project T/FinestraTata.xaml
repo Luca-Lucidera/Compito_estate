@@ -13,13 +13,14 @@
         <TextBox x:Name="txt_email" HorizontalAlignment="Left" Height="23" Margin="285,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292"/>
         <PasswordBox x:Name="txt_password" HorizontalAlignment="Left" Margin="285,90,0,0" VerticalAlignment="Top" Width="292" Height="23"/>
         <TextBox x:Name="txt_nome" HorizontalAlignment="Left" Height="23" Margin="334,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243"/>
-        <TextBox x:Name="txt_cognome" HorizontalAlignment="Left" Height="23" Margin="334,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243"/>
+        <TextBox x:Name="txt_cognome" HorizontalAlignment="Left" Height="23" Margin="334,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" TextChanged="txt_cognome_TextChanged"/>
         <TextBox x:Name="txt_zona_operativa1" HorizontalAlignment="Left" Height="23" Margin="334,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243"/>
         <Label Content="NOME" HorizontalAlignment="Left" Margin="172,215,0,0" VerticalAlignment="Top" Width="95" Height="23"/>
         <Label Content="COGNOME" HorizontalAlignment="Left" Margin="172,269,0,0" VerticalAlignment="Top" Width="95" Height="23"/>
         <Label Content="ZONA OPERATIVA" HorizontalAlignment="Left" Margin="172,323,0,0" VerticalAlignment="Top" Width="115" Height="23"/>
-        <Button x:Name="btn_registrati" Content="REGISTRATI (COMPILARE EMAIL E PASSWORD SOPRA)" HorizontalAlignment="Left" Margin="172,374,0,0" VerticalAlignment="Top" Width="405" Height="35" RenderTransformOrigin="0.497,0.516" Click="btn_registrati_Click"/>
+        <Button x:Name="btn_registrati" Content="REGISTRATI (COMPILARE EMAIL E PASSWORD SOPRA)" HorizontalAlignment="Left" Margin="172,374,0,0" VerticalAlignment="Top" Width="405" Height="35" RenderTransformOrigin="0.497,0.516" Click="btn_registrati_Click" IsEnabled="False"/>
         <Button x:Name="btn_homePage" Content="HOME&#xA;PAGE" HorizontalAlignment="Left" Margin="10,374,0,0" VerticalAlignment="Top" Width="75" Height="35" Background="Red" Click="btn_homePage_Click"/>
+        <Button x:Name="btn_foto" Content="Fatti una foto!" HorizontalAlignment="Left" Margin="594,374,0,0" VerticalAlignment="Top" Width="168" Height="33" Click="Button_Click" IsEnabled="False"/>
 
     </Grid>
 </Window>

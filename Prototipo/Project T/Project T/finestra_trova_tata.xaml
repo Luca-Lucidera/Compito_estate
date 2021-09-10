@@ -10,15 +10,16 @@
         <TextBox x:Name="txt_zona" HorizontalAlignment="Left" Height="26" Margin="193,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" TextChanged="txt_zona_TextChanged"/>
         <Label Content="Inserire la zone della ricerca" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0" Width="160"/>
         <Button x:Name="btn_cerca" Content="Cerca" HorizontalAlignment="Left" Margin="496,30,0,0" VerticalAlignment="Top" Width="154" Height="26" Click="btn_cerca_Click"/>
-        <ListView x:Name="listPersone" HorizontalAlignment="Left" Height="217" Margin="10,102,0,0" VerticalAlignment="Top" Width="772">
+        <ListView x:Name="listPersone" HorizontalAlignment="Left" Height="217" Margin="10,79,0,0" VerticalAlignment="Top" Width="772" SelectionChanged="listPersone_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="btn_contatta" Content="Contattala per incaricarla" HorizontalAlignment="Left" Margin="312,350,0,0" VerticalAlignment="Top" Width="154" Height="26" Click="btn_contatta_Click"/>
+        <Button x:Name="btn_contatta" Content="Contattala per incaricarla" HorizontalAlignment="Left" Margin="628,308,0,0" VerticalAlignment="Top" Width="154" Height="50" Click="btn_contatta_Click"/>
         <Button x:Name="btn_homePage" Content="HOME&#xA;PAGE" HorizontalAlignment="Left" Margin="707,374,0,0" VerticalAlignment="Top" Width="75" Height="35" Background="Red" Click="btn_homePage_Click"/>
+        <Image x:Name="img_tata" HorizontalAlignment="Left" Height="101" Margin="10,308,0,0" VerticalAlignment="Top" Width="108"/>
 
     </Grid>
 </Window>

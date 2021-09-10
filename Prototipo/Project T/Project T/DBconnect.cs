@@ -2,9 +2,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace Project_T
 {
@@ -79,7 +84,7 @@ namespace Project_T
                 return false;
             }
         }
- 
+
         //Count statement
         public int Count()
         {
@@ -107,7 +112,7 @@ namespace Project_T
         }
 
         //metodi per gestire la tabella della tata
-        public bool loginTata(string email,string password)
+        public bool loginTata(string email, string password)
         {
             string query = "SELECT email, psw FROM tata";
             if (OpenConnection() == true)
@@ -116,7 +121,7 @@ namespace Project_T
                 MySqlDataReader dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
-                    if(dataReader["email"].ToString() == email
+                    if (dataReader["email"].ToString() == email
                         && dataReader["psw"].ToString() == password)
                     {
                         CloseConnection();
@@ -127,7 +132,7 @@ namespace Project_T
                 return false;
             }
             CloseConnection();
-            return  false;
+            return false;
         }
         public bool registrati(string nome, string cognome, string email, string password, string zona_operativa, string image_path)
         {
@@ -136,10 +141,14 @@ namespace Project_T
             {
                 if (this.OpenConnection() == true)
                 {
-                    string query = String.Format("INSERT INTO tata(nome,cognome,email,psw,zona_operativa,occupata,image_path) VALUE('{0}','{1}','{2}','{3}','{4}',{5},'{6}')", nome, cognome, email, password, zona_operativa, false, image_path);
+                    byte[] immagineBinaria = ImmagineABinario(image_path);
+                    string query = String.Format("INSERT INTO tata(nome,cognome,email,psw,zona_operativa,occupata,image_path) VALUE('{0}','{1}','{2}','{3}','{4}',{5},@image_path)", nome, cognome, email, password, zona_operativa, false);
+                    //string query ="INSERT INTO files(file_data) VALUE(@file_data)" ;
+
                     //create command and assign the query and connection from the constructor
                     MySqlCommand cmd = new MySqlCommand(query, connection);
-
+                    cmd.Parameters.Add("@image_path", MySqlDbType.Blob);
+                    cmd.Parameters["@image_path"].Value = immagineBinaria;
                     //Execute command
                     cmd.ExecuteNonQuery();
 
@@ -153,8 +162,8 @@ namespace Project_T
         }
         public int getIdByEmail(string email)
         {
-            
-            if (this.OpenConnection()== true)
+
+            if (this.OpenConnection() == true)
             {
                 int id = -1;
                 string query = String.Format("SELECT id FROM tata WHERE email='{0}'", email);
@@ -188,9 +197,9 @@ namespace Project_T
         }
         public List<string> GetTata(string email)
         {
-            if(this.OpenConnection() == true)
+            if (this.OpenConnection() == true)
             {
-                string query = String.Format("SELECT * FROM tata where email='{0}'",email);
+                string query = String.Format("SELECT * FROM tata where email='{0}'", email);
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
                 dataReader.Read();
@@ -211,9 +220,9 @@ namespace Project_T
         }
         public bool CambiaMail(string email, int id)
         {
-            if(this.OpenConnection() == true)
+            if (this.OpenConnection() == true)
             {
-                string query = String.Format("UPDATE tata SET email = '{0}' WHERE id = {1}", email,id);
+                string query = String.Format("UPDATE tata SET email = '{0}' WHERE id = {1}", email, id);
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.CommandText = query;
                 cmd.Connection = connection;
@@ -226,9 +235,9 @@ namespace Project_T
 
         public bool CambiaOccupazione(int id)
         {
-            if(OpenConnection() == true)
+            if (OpenConnection() == true)
             {
-                string query= String.Format("SELECT occupata FROM tata WHERE id = {0}", id);
+                string query = String.Format("SELECT occupata FROM tata WHERE id = {0}", id);
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
                 dataReader.Read();//se devo prendere un solo valore non devo fare vari cicli per il dataReader
@@ -256,7 +265,7 @@ namespace Project_T
 
         public bool cambiaZonaOperativa(string zona_operativa, int id)
         {
-            if(OpenConnection() == true)
+            if (OpenConnection() == true)
             {
                 string query = String.Format("UPDATE tata SET zona_operativa = '{0}' WHERE id = {1}", zona_operativa, id);
                 MySqlCommand cmd = new MySqlCommand();
@@ -326,7 +335,7 @@ namespace Project_T
         }
         public bool registraUtente(string nome, string cognome, string email, string password, int nTelefono)
         {
-            
+
             if (!loginUtente(email, password))
             {
                 if (this.OpenConnection() == true)
@@ -343,16 +352,16 @@ namespace Project_T
                     return true;
                 }
                 return false;
-            }   
+            }
             return false;
         }
 
         public List<string>[] Cerca(string zona)
         {
-            if(OpenConnection() == true)
+            if (OpenConnection() == true)
             {
                 string query = String.Format("SELECT nome,cognome,email,zona_operativa FROM tata WHERE zona_operativa = '{0}' AND OCCUPATA = 0", zona);
-                List<string>[] tabella= new List<string>[4];//4 colonne
+                List<string>[] tabella = new List<string>[4];//4 colonne
                 tabella[0] = new List<string>();
                 tabella[1] = new List<string>();
                 tabella[2] = new List<string>();
@@ -380,7 +389,45 @@ namespace Project_T
             return null;
         }
 
+        public byte[] ImmagineABinario(string image_path)
+        {
+            FileStream fs;
+            BinaryReader br;
+            string FileName = image_path;
+            byte[] ImageData;
+            fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
+            br = new BinaryReader(fs);
+            ImageData = br.ReadBytes((int)fs.Length);
+            br.Close();
+            fs.Close();
+            return ImageData;
+        }
+        public Bitmap PrendiFotoDalBD(string email)
+        {
 
+            if (OpenConnection() == true)
+            {
+                string query = String.Format("select image_path from tata where email='{0}'",email);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+                DataSet ds = new DataSet();
+
+                da.Fill(ds);
+
+                if (ds.Tables[0].Rows.Count > 0)
+                { 
+
+                    MemoryStream ms = new MemoryStream((byte[])ds.Tables[0].Rows[0]["image_path"]);
+
+                    Bitmap bm = new Bitmap(ms);
+                    return bm;
+                }
+            }
+            return null;
+            
+            
+        }
     }
 
 }

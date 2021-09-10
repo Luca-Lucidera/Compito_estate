@@ -105,3 +105,6 @@ D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug
 D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.Extensions.xml
 D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.UserInterface.pdb
 D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\OpenCvSharp.UserInterface.xml
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\Fotocamera.exe
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\Fotocamera.pdb
+D:\Scuola\Progetti\GITHUB\Compito_estate\Prototipo\Project T\Project T\bin\Debug\Fotocamera.exe.config
