@@ -4,6 +4,8 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -64,12 +66,32 @@ namespace Project_T
 
         private void btn_contatta_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void txt_zona_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            int x = 1;
+            if(x == 1)
+            {
+                MessageBox.Show("Pulsante disabilitato");
+            }
+            else
+            {
+                var smtpClient = new SmtpClient("smtp.gmail.com")
+                {
+                    Port = 587,
+                    Credentials = new NetworkCredential("email del server smtp", "passowrd"),
+                    EnableSsl = true,
+                };
+                var mailMessage = new MailMessage
+                {
+                    From = new MailAddress("inserire l'email di partenza"),
+                    Subject = "oggetto della mail",
+                    Body = "Corpo dell mail",
+                    IsBodyHtml = false,
+                };
+                var attachment = new Attachment(/*Allegati*/"");
+                mailMessage.Attachments.Add(attachment);
+                mailMessage.To.Add("Mail del destinatario");
+                smtpClient.Send(mailMessage);
+            }
+            
         }
 
         private void btn_homePage_Click(object sender, RoutedEventArgs e)

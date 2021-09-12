@@ -355,7 +355,6 @@ namespace Project_T
             }
             return false;
         }
-
         public List<string>[] Cerca(string zona)
         {
             if (OpenConnection() == true)
@@ -388,6 +387,7 @@ namespace Project_T
             }
             return null;
         }
+        
 
         public byte[] ImmagineABinario(string image_path)
         {
