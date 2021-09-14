@@ -1,0 +1,15 @@
+1:
+ - Nome: Alberto
+ - Età: 55
+ - Lavoro: Operaio
+ - Località: Milano
+ - Stile di vita: Frenetico, sempre impegnato, poco tempo per se stesso
+ - Segni particolari: Nessuno.
+
+2:
+ - Nome: Maria
+ - Età: 80
+ - Lavoro: Pensionata
+ - Località: Milano
+ - Stile di vita: Tranquilla e rilassata
+ - Segni particolari: È una nonna smart al passo coi tempi.

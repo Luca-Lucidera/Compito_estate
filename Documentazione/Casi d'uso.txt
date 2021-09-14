@@ -1,0 +1,33 @@
+1: Creazione account Tata
+    Sequenza eventi:
+        - Selezionare se sei una tata o un utente normale
+        - Inserimento Nome, Cognome, Email, Password, Zona operativa
+        - La tata deve scattarsi una foto
+        - Premere il tasto registrati
+    Errori: 
+        - utente inserisce numeri nella casella nome/Cognome
+        - utente non si scatta la foto
+
+2: Creazione account utente
+    Sequenza eventi:
+        - Selezionare se sei un utente o una tata
+        - Inserire nome, cognome, email, password
+        - premere il tasto registrati
+    Errori: 
+        - utente inserisce numeri nella casella nome/Cognome
+
+3: Ricerca di una tata
+    Sequenza eventi:
+        - Selezionare il pulsante utente
+        - Inserire email e password per fare il login
+        - Inserire nella casella di testo la città desiderata
+        - premere il pulsante per la ricerca
+    Errori:
+        - Email o passowrd nella login sbagliate
+        - Utente inserisce la città sbagliata
+
+4: Cambio di informazioni personali per la tata
+    Sequenza eventi: 
+        - Tata inserisce email e password
+        - Tata preme il pulsante per fare la login
+        - La tata ora può modificare Email/Password/Zona operativa/Occupata
